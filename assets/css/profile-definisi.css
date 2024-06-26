@@ -86,3 +86,244 @@ nav .nav-links .dropdown-menu li a:hover {
 nav .nav-links li:last-child {
     margin-right: 0;
 }
+
+.definisi {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.definisi h1 {
+    font-size: 36px;
+    color: #009345;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-top: 100px;
+}
+
+.definisi h2 {
+    font-size: 24px;
+    color: #009345;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.definisi h3 {
+    font-size: 20px;
+    color: #009345;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.definisi p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.definisi ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    z-index: -1;
+}
+
+.card {
+    height: 550px;
+    width: 400px;
+    padding: 20px 35px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 2rem;
+    position: static;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #38E54D;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h2 {
+    color: #009345;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* Mengatur gaya teks paragraf dalam .card */
+.card p {
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Prinsip section styling */
+/* Prinsip section styling */
+.prinsip {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.judul-prinsip h2 {
+    font-size: 30px;
+    color: #009345;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.prinsip-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.prinsip-item {
+    background-color: #f9f9f9;
+    border: 1px solid #009345;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 48%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Tambahkan transition untuk animasi */
+}
+
+.prinsip-item h3 {
+    font-size: 18px;
+    color: #009345;
+    margin-bottom: 0.5rem;
+}
+
+.prinsip-item p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.prinsip-item h4 {
+    font-size: 16px;
+    color: dimgrey;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* Tambahkan efek hover */
+.prinsip-item:hover {
+    transform: scale(1.05);
+    /* Perbesar skala elemen */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Tambahkan bayangan */
+}
+
+footer {
+    background: linear-gradient(to right, #009345, #009345, #87C139);
+    color: white;
+    padding: 2rem 5rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.footer-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-info p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.footer-info i {
+    margin-right: 0.5rem;
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.footer-column {
+    margin-right: 2rem;
+}
+
+.footer-column h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-right {
+    max-width: 200px;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+.footer-right h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.footer-right p {
+    margin: 0.5rem 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid white;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
