@@ -44,12 +44,10 @@ nav .nav-links li a {
     text-decoration: none;
 }
 
-/* warna font ketika dihover */
 nav .nav-links li a:hover {
     color: #38E54D;
 }
 
-/* Mengatur dropdown */
 nav .nav-links .dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -82,16 +80,25 @@ nav .nav-links .dropdown-menu li a:hover {
     color: white;
 }
 
-/* Mengatur li yang terakhir */
 nav .nav-links li:last-child {
     margin-right: 0;
+}
+
+hr {
+    width: 100px;
+    height: 10px;
+    background-color: #87C139;
+}
+
+.container {
+    padding: 0 100px;
 }
 
 .definisi {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    
+
 }
 
 .definisi h1 {
@@ -100,20 +107,6 @@ nav .nav-links li:last-child {
     text-align: center;
     margin-bottom: 1rem;
     padding-top: 100px;
-}
-
-.definisi h2 {
-    font-size: 24px;
-    color: #009345;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.definisi h3 {
-    font-size: 20px;
-    color: #009345;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .definisi p {
@@ -131,29 +124,32 @@ nav .nav-links li:last-child {
 
 .box {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    z-index: -1;
+    justify-content: space-around;
+    padding: 20px;
 }
 
 .card {
-    height: 550px;
-    width: 400px;
-    padding: 20px 35px;
-    background-color: white;
-    border-radius: 20px;
-    margin: 2rem;
-    position: static;
-    overflow: hidden;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
     text-align: center;
-    border: 1px solid #38E54D;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    animation: float 3s ease-in-out infinite;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+/* Animation for moving the cards up and down */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .card h2 {
@@ -176,12 +172,12 @@ nav .nav-links li:last-child {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .judul-prinsip h2 {
     font-size: 30px;
     color: #009345;
-    text-align: center;
     margin-bottom: 2rem;
 }
 
@@ -326,4 +322,85 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .box,
+    .prinsip-list,
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .card,
+    .prinsip-item {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-right {
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+
+    .footer-column h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer-column ul li {
+        font-size: 0.8rem;
+    }
 }

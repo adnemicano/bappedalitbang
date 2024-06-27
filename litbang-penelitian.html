@@ -12,6 +12,11 @@
 <body>
     <nav>
         <img src="assets/images/logo.png" alt="Logo">
+
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fa fa-bars"></i>
+        </button>
+
         <ul class="nav-links">
             <li><a href="index.html">Beranda</a></li>
             <li class="dropdown">
@@ -44,8 +49,8 @@
         </ul>
     </nav>
 
-    <section class="penelitian">
-        <div class="container">
+    <section class="penelitian container">
+        <div class="title">
             <h1>Penelitian</h1>
             <div class="filter-options">
                 <select>
@@ -190,6 +195,13 @@
             <p>Copyright © 2024. Bappeda Litbang Kabupaten Empat Lawang</p>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('nav-active');
+        });
+    </script>
+
 </body>
 
 </html>

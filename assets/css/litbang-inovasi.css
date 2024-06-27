@@ -24,6 +24,10 @@ nav {
     z-index: 1000;
 }
 
+nav img {
+    max-height: 50px;
+}
+
 nav .nav-links {
     display: flex;
     justify-content: space-between;
@@ -44,12 +48,10 @@ nav .nav-links li a {
     text-decoration: none;
 }
 
-/* warna font ketika dihover */
 nav .nav-links li a:hover {
     color: #38E54D;
 }
 
-/* Mengatur dropdown */
 nav .nav-links .dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -82,7 +84,6 @@ nav .nav-links .dropdown-menu li a:hover {
     color: white;
 }
 
-/* Mengatur li yang terakhir */
 nav .nav-links li:last-child {
     margin-right: 0;
 }
@@ -101,6 +102,10 @@ nav .nav-links li:last-child {
     padding-top: 100px;
 }
 
+.table-container {
+    overflow-x: auto;
+}
+
 .tabel-penelitian {
     width: 100%;
     border-collapse: collapse;
@@ -112,7 +117,6 @@ nav .nav-links li:last-child {
     background-color: #009345;
     color: white;
     text-align: center;
-
 }
 
 .tabel-penelitian th,
@@ -271,4 +275,77 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+            padding: 1rem 30px;
+        }
+    
+        nav .nav-links {
+            display: none;
+        }
+
+    .penelitian {
+        padding: 1rem;
+    }
+
+        .footer-container {
+            flex-direction: column;
+        }
+    
+        .footer-left,
+        .footer-right {
+            margin-bottom: 2rem;
+        }
+}
+
+@media (max-width: 576px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+
+    .footer-column h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer-column ul li {
+        font-size: 0.8rem;
+    }
 }

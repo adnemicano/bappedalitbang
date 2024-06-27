@@ -85,47 +85,47 @@ nav .nav-links li:last-child {
     margin-right: 0;
 }
 
-main {
-    margin-top: 8rem;
+.container {
+    padding: 0 100px;
 }
 
-.content {
+.desc {
+    max-width: 800px;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.title {
     margin-top: 6rem;
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
 }
 
-.content h1 {
+.title h1 {
+    margin-top: 6rem;
     color: #4CAF50;
     text-align: center;
     padding-bottom: 2rem;
 }
 
 .pict-content {
-    margin-left: -100px;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.content .pict-content img {
-    width: 120%;
+.title .pict-content img {
+    max-width: 100%;
     height: auto;
-}
-
-
-.desc {
-    padding: 2rem;
-    max-width: 1200px;
+    display: block;
     margin: 0 auto;
-
 }
 
 .desc p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
+    text-align: justify;
     margin-bottom: 1rem;
-    margin-top: 2rem;
-    margin-left: 3rem;
+    font-size: 1rem;
 }
 
 .desc ol {
@@ -133,8 +133,6 @@ main {
     padding-top: 10px;
     color: #333;
 }
-
-
 
 footer {
     background: linear-gradient(to right, #009345, #009345, #87C139);
@@ -233,4 +231,91 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    .footer-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-info p,
+    .footer-column ul li,
+    .footer-right p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-right {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+
+    .footer-column h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer-column ul li {
+        font-size: 0.8rem;
+    }
 }

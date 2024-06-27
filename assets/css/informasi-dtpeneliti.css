@@ -87,6 +87,10 @@ nav .nav-links li:last-child {
     margin-right: 0;
 }
 
+.container {
+    padding: 0 100px;
+}
+
 .datapeneliti {
     padding: 2rem;
     max-width: 1200px;
@@ -103,23 +107,19 @@ nav .nav-links li:last-child {
 
 .peneliti-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 3rem 50px;
-    gap: 5px;
-    /* Reduced gap for smaller spacing */
     flex-wrap: wrap;
-    position: static;
+    gap: 10px;
 }
 
 .peneliti-item {
-    position: static;
+    flex: 1 1 45%;
+    /* Adjust this to change the number of items per row */
+    position: relative;
     overflow: hidden;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    width: calc(50% - 5px);
-    /* Adjusted width to fit two items in one row */
+    margin: 5px;
 }
 
 .peneliti-item:hover {
@@ -129,16 +129,19 @@ nav .nav-links li:last-child {
 .peneliti-item img {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.peneliti-item:hover img {
+    transform: scale(1.1);
 }
 
 .pagination {
     display: flex;
     justify-content: center;
-    /* Center the pagination */
     align-items: center;
     margin-top: 20px;
     margin-bottom: 2rem;
-    /* Add margin to the top for spacing */
 }
 
 .pagination a {
@@ -255,4 +258,95 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .peneliti-item {
+        flex: 1 1 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-right {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+
+    .footer-column h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer-column ul li {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .datapeneliti h1 {
+        font-size: 28px;
+    }
+
+    .pagination a {
+        padding: 6px 12px;
+    }
+
+    footer {
+        padding: 1rem 2rem;
+    }
 }

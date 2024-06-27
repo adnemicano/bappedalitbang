@@ -94,23 +94,23 @@ section {
     /* To offset the fixed navbar */
 }
 
+.container {
+    padding: 0 100px;
+}
+
 /* Styling for the title section */
-.merk-title {
+.merk {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.merk-title h1 {
+.merk h1 {
     font-size: 36px;
     color: #009345;
     text-align: center;
     padding-top: 100px;
-}
-
-/* Styling for the regulasi-list section */
-.merk {
-    text-align: center;
 }
 
 .merk  h4 {
@@ -220,4 +220,109 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 4%;
+    }
+
+    .merk {
+        padding: 0 50px;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+        .footer-info h3 {
+            font-size: 1.2rem;
+        }
+    
+        .footer-info p,
+        .footer-column ul li,
+        .footer-right p {
+            font-size: 0.8rem;
+        }
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .merk {
+        padding: 0 30px;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .merk {
+        padding: 0 30px;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-right {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+    
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+
+    .footer-column h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer-column ul li {
+        font-size: 0.8rem;
+    }
 }

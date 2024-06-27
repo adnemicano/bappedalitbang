@@ -24,6 +24,11 @@ nav {
     z-index: 1000;
 }
 
+nav img {
+    max-width: 100px;
+    height: auto;
+}
+
 nav .nav-links {
     display: flex;
     justify-content: space-between;
@@ -44,12 +49,10 @@ nav .nav-links li a {
     text-decoration: none;
 }
 
-/* warna font ketika dihover */
 nav .nav-links li a:hover {
     color: #38E54D;
 }
 
-/* Mengatur dropdown */
 nav .nav-links .dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -82,7 +85,6 @@ nav .nav-links .dropdown-menu li a:hover {
     color: white;
 }
 
-/* Mengatur li yang terakhir */
 nav .nav-links li:last-child {
     margin-right: 0;
 }
@@ -91,22 +93,26 @@ nav .nav-links li:last-child {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-
+    padding-top: 100px;
 }
 
 .struktur h1 {
     font-size: 36px;
     color: #009345;
     text-align: center;
-    margin-bottom: 1rem;
-    padding-top: 100px;
+    margin-bottom: 3rem;
 }
 
 .struktur .img-struktur {
     width: 100%;
     height: auto;
-    margin-left: -100px;
-    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.struktur .img-struktur img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
@@ -206,4 +212,90 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+            padding: 1rem 30px;
+        }
+    
+        nav .nav-links {
+            display: none;
+        }
+
+    .struktur h1 {
+        font-size: 28px;
+    }
+
+    .struktur .img-struktur img {
+        margin-left: 0;
+    }
+
+    footer {
+        padding: 2rem;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .berita-item {
+        width: 100%;
+    }
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+
+    .footer-column h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer-column ul li {
+        font-size: 0.8rem;
+    }
 }

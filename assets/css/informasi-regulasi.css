@@ -87,34 +87,33 @@ nav .nav-links li:last-child {
     margin-right: 0;
 }
 
-.regulasi-title {
+.container {
+    padding: 0 100px;
+}
+
+.regulasi {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 
 }
 
-.regulasi-title h1 {
+.regulasi h1 {
     font-size: 36px;
     color: #009345;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     padding-top: 100px;
-}
-
-/* Existing CSS */
-.regulasi-list {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
 }
 
 .regulasi-item {
     display: flex;
     align-items: center;
     background-color: #f9f9f9;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     padding: 1rem;
+    text-align: left;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -176,6 +175,7 @@ nav .nav-links li:last-child {
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color 0.3s;
+    margin-bottom: 3rem;
 }
 
 .pagination a.active {
@@ -285,4 +285,89 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+
+    .regulasi-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-right {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .regulasi h1 {
+        font-size: 1.5rem;
+    }
+
+    .regulasi-content h2 {
+        font-size: 1rem;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+
+    .footer-column h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer-column ul li {
+        font-size: 0.8rem;
+    }
 }

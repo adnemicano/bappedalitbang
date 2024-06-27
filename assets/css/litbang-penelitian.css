@@ -84,10 +84,15 @@ nav .nav-links li:last-child {
     margin-right: 0;
 }
 
+.container {
+    padding: 0 100px;
+}
+
 .penelitian {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .penelitian h1 {
@@ -292,4 +297,135 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .filter-options {
+        flex-direction: column;
+    }
+
+    .filter-options select,
+    .filter-options input {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .penelitian {
+        padding: 1rem;
+    }
+
+    .penelitian h1 {
+        font-size: 28px;
+    }
+
+    .tabel-penelitian {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .tabel-penelitian th,
+    .tabel-penelitian td {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-right {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    nav {
+        padding: 1rem 30px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+
+    .footer-column h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer-column ul li {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .filter-options select,
+    .filter-options input,
+    .filter-options button {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: right;
+    margin-left: 50px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
 }
