@@ -148,30 +148,22 @@ nav .nav-links li:last-child {
 .styled-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 0.9em;
-    font-family: 'Inter', sans-serif;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-.styled-table thead tr {
-    background-color: #009345;
-    color: #ffffff;
-    text-align: left;
+    margin-bottom: 2rem;
 }
 
 .styled-table th,
 .styled-table td {
     padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
 
-.styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
+.styled-table th {
+    background-color: #f4f4f4;
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+    background-color: #f9f9f9;
 }
 
 .styled-table tbody tr:last-of-type {
@@ -192,8 +184,7 @@ nav .nav-links li:last-child {
 footer {
     background: linear-gradient(to right, #009345, #009345, #87C139);
     color: white;
-    padding: 2rem 5%;
-    /* Adjusted padding for responsiveness */
+    padding: 2rem 5rem;
 }
 
 .footer-container {
@@ -296,13 +287,6 @@ footer {
 }
 
 @media (max-width: 992px) {
-    nav {
-        padding: 1rem 30px;
-    }
-
-    nav .nav-links {
-        display: none;
-    }
 
     .footer-middle {
         flex-direction: column;
@@ -317,18 +301,48 @@ footer {
 }
 
 @media (max-width: 768px) {
-    nav {
+nav {
         padding: 1rem 30px;
+        flex-wrap: wrap;
     }
 
     nav .nav-links {
         display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav .nav-links li {
+        margin: 1rem 0;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to right, #009345, #009345, #87C139);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        z-index: 1000;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        color: white;
+        margin-left: auto;
+        font-size: 28px;
     }
 
     .selayang,
-    .fungsi,
-    .tabel {
-        padding: 2rem 5%;
+    .fungsi {
+        padding: 1rem;
+    }
+
+    .tabel { 
+        padding: 1rem;
     }
 
     .footer-container {
@@ -342,14 +356,6 @@ footer {
 }
 
 @media (max-width: 576px) {
-
-    nav {
-        padding: 1rem 30px;
-    }
-
-    nav .nav-links {
-        display: none;
-    }
 
     .footer-info p {
         font-size: 0.8rem;

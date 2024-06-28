@@ -294,13 +294,6 @@ footer {
 }
 
 @media (max-width: 992px) {
-    nav {
-        padding: 1rem 30px;
-    }
-
-    nav .nav-links {
-        display: none;
-    }
 
     .footer-middle {
         flex-direction: column;
@@ -316,12 +309,39 @@ footer {
 
 @media (max-width: 768px) {
 
-    nav {
+nav {
         padding: 1rem 30px;
+        flex-wrap: wrap;
     }
 
     nav .nav-links {
         display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav .nav-links li {
+        margin: 1rem 0;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to right, #009345, #009345, #87C139);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        z-index: 1000;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        color: white;
+        margin-left: auto;
+        font-size: 28px;
     }
 
 
@@ -342,14 +362,6 @@ footer {
 }
 
 @media (max-width: 576px) {
-
-    nav {
-        padding: 1rem 30px;
-    }
-
-    nav .nav-links {
-        display: none;
-    }
 
     .regulasi h1 {
         font-size: 1.5rem;

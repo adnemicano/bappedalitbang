@@ -80,8 +80,9 @@ nav .nav-links .dropdown-menu li a:hover {
     color: white;
 }
 
-nav .nav-links li:last-child {
-    margin-right: 0;
+.menu-icon {
+    font-size: 28px;
+    display: none;
 }
 
 
@@ -345,6 +346,7 @@ footer {
     margin: 0;
 }
 
+
 @media (max-width: 1200px) {
 
     .bg-container,
@@ -352,10 +354,6 @@ footer {
     .paparan,
     .berita {
         padding: 0 50px;
-    }
-
-    nav {
-        padding: 1rem 50px;
     }
 
     .judul-layanan h2,
@@ -389,14 +387,6 @@ footer {
         padding: 0 30px;
     }
 
-    nav {
-        padding: 1rem 30px;
-    }
-
-    nav .nav-links {
-        display: none;
-    }
-
     .judul-layanan h2,
     .judul-paparan h2,
     .berita h2 {
@@ -422,6 +412,41 @@ footer {
 
 @media (max-width: 768px) {
 
+    nav {
+        padding: 1rem 30px;
+        flex-wrap: wrap;
+    }
+
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav .nav-links li {
+        margin: 1rem 0;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to right, #009345, #009345, #87C139);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        z-index: 1000;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        color: white;
+        margin-left: auto;
+        font-size: 28px;
+    }
+
     .bg-container,
     .layanan,
     .paparan,
@@ -435,15 +460,6 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-
-    nav {
-        padding: 1rem 30px;
-    }
-
-    nav .nav-links {
-        display: none;
-    }
-
 
     .judul-layanan h2,
     .judul-paparan h2,
@@ -476,13 +492,7 @@ footer {
 
 @media (max-width: 576px) {
 
-    nav {
-        padding: 1rem 30px;
-    }
 
-    nav .nav-links {
-        display: none;
-    }
 
     .footer-info p {
         font-size: 0.8rem;
